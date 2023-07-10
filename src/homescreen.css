@@ -1,0 +1,132 @@
+/* Have to add the image */
+
+.Home{
+
+    background-color: #000;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    height: 100vh;
+    width: 100vw;
+    color:white;
+
+    font-size: 5vh;
+    /* make it cover to cover the fullscreen */
+    background-size:cover;
+    overflow:hidden;
+
+    
+   
+}   
+
+#Title {
+    position:relative;
+    width: '100%';
+    font-size: 30vh;
+    text-align:'center';
+}
+
+/* Used for fix header */
+.header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0px 0;
+    position: fixed;
+    background-color: #ffffff00;
+
+    /* Fixes the position */
+    z-index:1;
+}
+
+
+li {
+    cursor: pointer;
+    list-style-type:none;
+}
+
+
+
+/*Used for fonts */
+.fontSubtext {
+    display:block;
+    font-family: 'VT323';
+    font-size: 20vh;    
+    text-align: center;
+
+}
+.subtextSpace {
+    position:relative;
+    width: 100vw;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+}
+.subButtonSpace {
+    position:relative;
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;    
+    margin-top: 0vh;
+}
+
+.buttonStyle {
+    width: 7vw;
+    height: 3vh;
+}
+.logo {
+    width: 50px;
+    height: 50px; 
+}
+
+.previousTrack {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20vw;
+    height: 20vh;
+    text-align: left;
+    border-color: #ffffff00;
+    font-size: 5vh;
+    
+    background-color: #ffffff00;
+    color: aliceblue;
+    font-family: 'VT323';
+}
+
+.nextTrack {
+    position: absolute;
+    left: 20vw;
+    bottom: 0;
+    width: 20vw;
+    height: 20vh;
+    text-align: left;
+    border-color: #ffffff00;
+    font-size: 5vh;
+    
+    background-color: #ffffff00;
+    color: aliceblue;
+    font-family: 'VT323';
+}
+
+body {
+    cursor: url('mousepointer.png'),auto;
+}
+
+
+.customImage {
+    height: 10vh;
+    width: 10vw;
+    outline: none;
+}
+.customButton {
+    background-size: 'cover';
+    background-position: 'center'; 
+    background-color: transparent;
+    height: 10vh;
+    width: 10vw;
+}

@@ -1,0 +1,25 @@
+.fullPage{
+    background-color: #000;
+    height: 500vh;
+    width: 100vw;
+}
+.PreviousWork{
+    background-color: #000;
+    background-image: url("https://64.media.tumblr.com/503307fc1bf3f184e80c217ff4ff7569/tumblr_o96nxvPnHE1tgoxx3o1_500.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    color:white;
+    font-size: 5vh;
+
+    /* make the image cover the 100vh, 100vw */
+    /* make it cover to cover the fullscreen */
+    background-size:cover;
+    overflow:hidden;
+}   
+
+.font {
+    font-family: 'VT323';
+}
+

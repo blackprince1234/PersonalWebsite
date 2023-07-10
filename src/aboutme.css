@@ -1,0 +1,49 @@
+.AboutMe {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    background-image: url("https://media2.giphy.com/media/gFPxNhzEWdFCCRAqf0/giphy.gif?cid=ecf05e47xzr177htlsx8414ao9f2pcrlppntanfia4xk9oyn&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    font-size: 5vh;
+    /* make it cover to cover the fullscreen */
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+.font {
+    font-family: 'VT323';
+}
+
+.Title {
+    position: absolute;
+    margin-top: 0;
+    font-size: 20vh;
+    font-family: 'VT323';
+}
+
+
+.Subtext {
+    position: relative;
+    margin-top: '20vh';
+    font-size: 5vh;
+    font-family: 'VT323';
+}
+
+.return {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20vw;
+    height: 20vh;
+    text-align: left;
+    border-color: #ffffff00;
+    font-size: 10vh;
+    
+    background-color: #ffffff00;
+    color: aliceblue;
+    font-family: 'VT323';
+}
