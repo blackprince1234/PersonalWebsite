@@ -1,7 +1,7 @@
 import './previouswork.css';
 import SearchBar from '../searchBar';
 import React, { useState } from "react";
-
+import Calendar from '../MyCalendar';
 
 function PreviousWork() {
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
@@ -28,7 +28,9 @@ function PreviousWork() {
 
 
   return (
-    <div style={{ width: '100%', height: '100vh' }}>
+    <div style={{ width: '100vw', height: '100vh' }}>
+      {/* Set design later */}
+      <Calendar/>
       <nav className='nav'>
         <div className="burger-menu" onClick={updateMenu}>
           <div className={burger_class} ></div>
@@ -36,6 +38,7 @@ function PreviousWork() {
           <div className={burger_class} ></div>
         </div>
       </nav>
+      
 
       <div className={menu_class}> 
       </div>
@@ -43,6 +46,7 @@ function PreviousWork() {
         <SearchBar/>
       </div>
 
+      
     </div>
   );
 }
