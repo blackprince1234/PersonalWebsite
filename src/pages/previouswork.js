@@ -1,24 +1,27 @@
 import './previouswork.css';
-import React, {useState} from "react";
+import SearchBar from '../searchBar';
+import React, { useState } from "react";
 
-
-//Easy scrollable
-// Homepage for the website
 
 function PreviousWork() {
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
   const [menu_class, setMenuClass] = useState("menu hidden")
+  const [searchbar_class, setSearchBarClass] = useState("search-bar hidden")
+
   const [isMenuClicked, setIsMenuClicked] = useState(false)
+  const [searchInput, setSearchInput] = useState("");
 
 
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurgerClass("burger-bar clicked")
+      setSearchBarClass("searchbar visible")
       setMenuClass("menu visible")
     }
-    else {
+    else if(isMenuClicked){
       setBurgerClass("burger-bar unclicked")
       setMenuClass("menu hidden")
+      setSearchBarClass("searchbar hidden")
     }
     setIsMenuClicked(!isMenuClicked)
   }
@@ -34,7 +37,12 @@ function PreviousWork() {
         </div>
       </nav>
 
-      <div className={menu_class}></div>
+      <div className={menu_class}> 
+      </div>
+      <div className={searchbar_class}>
+        <SearchBar/>
+      </div>
+
     </div>
   );
 }

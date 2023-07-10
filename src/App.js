@@ -2,10 +2,11 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
-import Home from './homescreen.js'
-import AboutMe from './aboutme.js';
-import PreviousWOrk from './previouswork.js';
-import ContactMe from './contactme.js';
+import Home from './pages/homescreen.js'
+import AboutMe from './pages/aboutme.js';
+import PreviousWOrk from './pages/previouswork.js';
+import ContactMe from './pages/contactme.js';
+import SearchBar from './searchBar';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import './homescreen.css';
-import Header from "./header";
+import Header from "../header";
 import Typed from 'react-typed';
 
 
