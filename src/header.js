@@ -1,7 +1,6 @@
 import { Link } from "react-scroll";
 import { useNavigate } from 'react-router-dom';
 import React from "react";
-import homescreen from './homescreen'
 
 const Header = () => {
     const navigate = useNavigate();
