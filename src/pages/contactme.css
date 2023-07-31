@@ -1,6 +1,5 @@
 .ContactMe{
     background-color: #000;
-    background-image: url("https://media1.giphy.com/media/wXx1UT4Q1W6Qg/giphy.gif?cid=ecf05e4798r1nxj4tzmagq7trf5ji6fxuoslt4hkaw6zc6ty&ep=v1_gifs_search&rid=giphy.gif&ct=g");
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -22,7 +21,7 @@
     margin-left: auto; 
     margin-right: auto;
     
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* Contact Us Title */
@@ -31,7 +30,43 @@
     text-align: center;
     width:100%;
     font-family: 'VT323';
+    height: 20vh;
+    font-size: 18vh;
+    color: #00FF00;
+
 }
+.title:hover{
+    animation: change 1s step-end infinite;
+}
+
+@keyframes change {
+    0% {
+      color: #FFFF00
+    }
+    12.5% {
+      color: #FF0000
+    }
+    25% {
+      color: #00FF00
+    }
+    37.5% {
+      color: #00FFFF
+    }
+    50% {
+        color: #FF00FF
+    }
+    62.5%{
+        color: #FF6600
+    }
+    75%{
+        color: white
+    }
+    87.5%{
+        color: #099FFF
+    }
+
+}
+
 
 .form {
     width:50vw;
@@ -47,19 +82,62 @@
 }
 .Name {
     display:block;
-    width: 20vw;
-    border: 1px solid red;
+    width: 25vw;
+    outline: none;
     align-self: left;
+    box-shadow: none;
+    font-family: 'VT323';
+    margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: #FFFF00;
+    text-align: left;
+
+    font-size: 5vh;
+
 }
+.Name:hover{
+    box-shadow:   -3px 0 0 0 #FFFF00,
+    3px 0 0 0 #FFFF00,
+    0 -3px 0 0 #FFFF00,
+    0 3px 0 0 #FFFF00;
+}
+
+
+.Name::placeholder{
+    color: #FFFF00;
+}
+
+
 .Email {
     width: 25vw;
+    height: 5vh;
     display: block;
-    /* border: 1px solid yellow; */
-    
+    font-family: 'VT323';
+    color:#FF6600;
+    margin-top: 3vh;
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 5vh;
+    text-align: left;
     margin-left: auto; 
     margin-right: auto;
+}
+
+.Email:hover{
+    box-shadow:   -2px 0 0 0 #FF6600,
+    2px 0 0 0 #FF6600,
+    0 -2px 0 0 #FF6600,
+    0 2px 0 0 #FF6600;
+    outline: none;
+    border: none;
+    color:#FF6600;
+}
+.Email::placeholder{
+    color:#FF6600;
 }
 
 .Subject {
@@ -68,19 +146,106 @@
     display: block;
     margin-left: auto; 
     margin-right: auto;
+    margin-top: 3vh;
+    font-family: 'VT323';
+    background-color: transparent;
+    text-align: left;
+    outline: none;
+    border: none;
+    color: #00FFFF;
+    font-size: 5vh;
+
+}
+.Subject::placeholder {
+    color: #00FFFF;
+}
+.Subject:hover{
+    box-shadow:   -2px 0 0 0 #00FFFF,
+    2px 0 0 0 #00FFFF,
+    0 -2px 0 0 #00FFFF,
+    
+    0 2px 0 0 #00FFFF;
 }
 .Message {
     width: 25vw;
-    /* border: 1px solid yellow; */
+    font-family: 'VT323';
+
+    margin-top: 3vh;
     margin-left: auto; 
     margin-right: auto;
+    resize: none;
     display: block;
+    background-color: transparent;
+    outline: none;  
+    border-color: transparent;
+    color: white;
+}
+.Message:hover{
+    border-radius: 5px;
+    border-color: white;
+}
+.Message::placeholder{
+    color:white;
 }
 
 .Button {
     width: 25vw;
     /* border: 1px solid yellow; */
+    font-family: 'VT323';
+    color: #FF00FF;
     margin-left: auto; 
     margin-right: auto;
     display: block;
+    margin: 2em auto;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-size: 5vh;
+ 
+}
+.Button:hover{
+    box-shadow:   -2px 0 0 0 #FF00FF,
+    2px 0 0 0 #FF00FF,
+    0 -2px 0 0 #FF00FF,
+    0 2px 0 0 #FF00FF;
+
+}
+
+.return {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20vw;
+    height: 20vh;
+    text-align: left;
+    border-color: #ffffff00;
+    font-size: 10vh;
+    
+    background-color: #ffffff00;
+    color: aliceblue;
+    font-family: 'VT323';
+}
+
+.return:hover {
+    cursor: pointer;
+    animation: change 15s infinite;
+}
+.Modal {
+    box-shadow:   -2px 0 0 0 #FF00FF,
+    2px 0 0 0 #FF00FF,
+    0 -2px 0 0 #FF00FF,
+    0 2px 0 0 #FF00FF;
+    text-align: center;
+    justify-content: center;
+    color: blue;
+    border-color: 1px red solid;
+    font-family: 'VT323';
+    font-size: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 50vw;
+    height:50vh;
+    background-color: white;
+
 }

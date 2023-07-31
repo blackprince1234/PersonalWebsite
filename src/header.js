@@ -1,12 +1,28 @@
 import { Link } from "react-scroll";
 import { useNavigate } from 'react-router-dom';
 import React from "react";
+import {datas} from './pages/homescreen.js';
 
+
+function clearAudio(){
+    for(let d = 0; d < datas.length; d++){
+        datas[d].audio.pause();
+    }
+}
 const Header = () => {
     const navigate = useNavigate();
-    const handleClick = () => navigate('/aboutme');
-    const handleClick2 = () => navigate('/previouswork');
-    const handleClick3 = () => navigate('/contactme');
+    const handleClick = () => {
+        navigate('/aboutme');
+        clearAudio();
+    }
+    const handleClick2 = () => {
+        navigate('/previouswork');
+        clearAudio();
+    }
+    const handleClick3 = () => {
+        navigate('/contactme');
+        clearAudio();
+    }
 
 
     // const handleClick = () => alert("Trying to navigate to difff page");
@@ -23,7 +39,6 @@ const Header = () => {
                         offset={-70}
                         duration={500} 
                         className="font"
-                    
                     >
                         About Me
 

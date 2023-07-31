@@ -12,14 +12,12 @@ import staticNoise from "./assets/radiostatic.mp3"
 import { useState } from 'react';
 
 //Import all the backgrounds
+import background from './assets/home_background.gif';
 import background1 from './assets/background1.gif';
 import background2 from './assets/background2.gif';
 import background3 from './assets/background3.gif';
 import background4 from './assets/background4.gif';
 
-import pause from './assets/paused.png';
-import next from './assets/next.png';
-import back from './assets/back.png';
 const audio = new Audio(sound);
 const audio2 = new Audio(sound2);
 const audio3 = new Audio(sound3);
@@ -28,32 +26,17 @@ const audio4 = new Audio(sound4);
 const noise = new Audio(staticNoise);
 
 
-const ImageButton = () => {
-  return (
-    <button className="customButton" style={{ border: 'none', outline: 'none', }}>
-      <img className="customImage" src={next} alt="Button Image" />
-    </button>
-  );
-};
-const ImageButton2 = () => {
-  return (
-    <button className="customButton" style={{ border: 'none', outline: 'none', }}>
-      <img className="customImage" src={pause} alt="Button Image" />
-    </button>
-  );
-};
-
-const ImageButton3 = () => {
-  return (
-    <button className="customButton" style={{ border: 'none', outline: 'none', }}>
-      <img className="customImage" src={back} alt="Button Image" />
-    </button>
-  );
-};
+var totalArray = [];
+export const datas = [
+  { name: 'Cheek to Cheek', audio: audio, background: `url(${background1})` },
+  { name: 'In the Mood', audio: audio2, background: `url(${background2})` },
+  { name: 'La Vie En Rose', audio: audio3, background: `url(${background3})` },
+  { name: 'Girl from Ipanema', audio: audio4, background: `url(${background4})` }
+]
 function HomePage() {
 
   //Contians imagesd and background
-  var totalArray = [];
+
   totalArray.push({ name: 'Cheek to Cheek', audio: audio, background: `url(${background1})` });
   totalArray.push({ name: 'In the Mood', audio: audio2, background: `url(${background2})` });
   totalArray.push({ name: 'La Vie En Rose', audio: audio3, background: `url(${background3})` });
@@ -66,7 +49,7 @@ function HomePage() {
 
   //Changing background function (Make it into array list of string)
 
-  let original_background = 'url(' + "https://media4.giphy.com/media/cIJyNTHOIbR69gcMSb/giphy.gif?cid=ecf05e47oh8w3ifsmok13fjnnqduc6g8iz01ehe6qark5w1y&ep=v1_gifs_search&rid=giphy.gif&ct=g" + ')';
+  let original_background = 'url(' + background + ')';
   const [backgroundImage, setBackgroundImage] = useState(original_background);
 
   const backgroundChange = (param1) => {
@@ -94,7 +77,7 @@ function HomePage() {
   }
   return (
 
-    <div id="bg" className="Home" style={{ background: backgroundImage, backgroundSize: 'cover' }}>
+    <div id="bg" className="Home" style={{ background: backgroundImage, backgroundSize: 'cover',}}>
       <Header />
 
       <div className="subtextSpace">
@@ -105,15 +88,17 @@ function HomePage() {
         />
         {/* For buttons. Need to change the frontend*/}
         <div className="subButtonSpace">
-          <ImageButton3/>
+          {/* <ImageButton3/>
           <ImageButton2/>
-          <ImageButton/>
+              border: 1px solid red;
+
+          <ImageButton/> */}
+            <button className="previousTrack" onClick={() => backgroundChange(-1)} > Previous </button>
+            <button className="nextTrack" onClick={() => backgroundChange(1)}> Next </button>
         </div>
       </div>
 
-      {/* Buttons to navigate through music (Delete later) */}
-      <button className="previousTrack" onClick={() => backgroundChange(-1)} > Previous </button>
-      <button className="nextTrack" onClick={() => backgroundChange(1)}> Next </button>
+     
     </div>
   );
 }

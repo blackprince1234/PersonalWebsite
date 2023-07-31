@@ -2,7 +2,6 @@
     height: 100vh;
     width: 100vw;
     background-color: #000;
-    background-image: url("https://media2.giphy.com/media/gFPxNhzEWdFCCRAqf0/giphy.gif?cid=ecf05e47xzr177htlsx8414ao9f2pcrlppntanfia4xk9oyn&ep=v1_gifs_search&rid=giphy.gif&ct=g");
     background-position: center;
     background-repeat: no-repeat;
 
@@ -21,8 +20,51 @@
 .Title {
     position: absolute;
     margin-top: 0;
+    width: 100%;
     font-size: 20vh;
     font-family: 'VT323';
+}
+.Title:hover{
+    animation: change 5s infinite;
+
+}
+@keyframes change {
+    0% {
+      color: #FFFF00
+    }
+    25% {
+      color: #FF0000
+    }
+    50% {
+      color: #00FF00
+    }
+    75% {
+      color: #00FFFF
+    }
+    90%{
+        color: #FF00FF
+    }
+}
+
+.ImageField{
+    position:relative;
+    width: 30%;
+    height:66%;
+    margin-top: 20vh;
+    float: left;
+    background-size: cover;
+}
+.TextField{
+    position:relative;
+    width: 70%;
+    height:100%;
+    margin-top: 20vh;
+    margin-left: 30%;
+    font-family: 'Special Elite';
+    line-height: 1.5;
+    padding-left: 10px;
+    font-size: 3vh;
+    color: white;
 }
 
 
@@ -33,14 +75,39 @@
     font-family: 'VT323';
 }
 
+.resume_space { 
+    position: relative;
+    /* border: blue solid 1px; */
+    width: 50%;
+
+}
+.resume_button{
+    /* border: red solid 1px; */
+    display: inline;
+    width: 50%;
+    font-size: 10vh;
+    text-align: center;
+}
+
+.instagram_button{
+    /* border: green solid 1px; */
+    position: absolute;
+
+    display: inline-block;
+    right: 0;
+    width: 50%;
+    font-size: 10vh;
+    text-align: center;
+}
 .return {
+    display: inline-block;
+
     position: absolute;
     left: 0;
     bottom: 0;
     width: 20vw;
     height: 20vh;
     text-align: left;
-    border-color: #ffffff00;
     font-size: 10vh;
     
     background-color: #ffffff00;

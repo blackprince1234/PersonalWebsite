@@ -2,6 +2,7 @@
     background-color: #000;
     height: 500vh;
     width: 100vw;
+    position: fixed;
 }
 
 .font {
@@ -85,8 +86,98 @@
 }
 
 .searchbar {
-    height: 50vh;
+    height: 100vh;
     width: 50vw;
-    background-color: antiquewhite;
-    border: 2px solid red;
+    background-color: black;
+
+    overflow-y: auto;
 }
+.companyButton:hover{
+    cursor:pointer;
+    
+    color: yellow;
+}
+
+.companyButton {
+    outline: 'none';
+    text-align: center;
+    padding-top: 10px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Special Elite';
+
+
+}
+.changeCalendar {
+    z-index: -1;
+}
+.returnButton:hover{
+    cursor: pointer;
+}
+
+.returnButton {
+    position: fixed;
+    color: black;
+    
+    left: 0;
+    bottom: 0;
+    width: 15vw;
+    height: 10vh;
+    text-align: left;
+    font-size: 10vh;
+    text-align: center;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-family: 'VT323';
+}
+
+.apply_link {
+    color: #DDC6B6;
+    position: relative;
+    
+    font-family: 'Serif';
+    text-decoration: none;
+    
+    
+    font-size: 5vh;
+    
+
+    /* border: 1px red solid; */
+
+}
+.company_name {
+    color: #DDC6B6;
+    text-align: center;
+    height: 30vh;
+    /* border:1px solid black; */
+    font-size: 7vh;
+}
+
+
+
+.close_modal {
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7vh;
+    background-color: #96351F;
+    outline: none;
+    border: none;
+    color: #DBB98F;
+    font-family: 'serif ';
+    font-size: 3vh;
+}
+
+.close_modal:hover{
+    cursor: pointer;
+}
+
+a { 
+    color:#FFFFFF; 
+    display:block; 
+    text-align: center;
+    width:100%;
+} 
+
